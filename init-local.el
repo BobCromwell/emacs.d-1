@@ -11,13 +11,18 @@
 ;; WARNING!  Depending on the default font,
 ;; if the size is not supported very well, the frame will be clipped
 ;; so that the beginning of the buffer may not be visible correctly.
-(set-face-attribute 'default nil :height 180)
+(set-face-attribute 'default nil :height 240)
 
 ;; show line number on side
 (global-linum-mode t)
 ;; adjust the space between the number & text
 ;;http://www.emacswiki.org/LineNumbers
 (setq linum-format  "%d ")
+
+;;mac key binding
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier 'meta)
+)
 
 (provide 'init-local)
 ;;; init-local.el ends here
