@@ -19,10 +19,16 @@
 ;;http://www.emacswiki.org/LineNumbers
 (setq linum-format  "%d ")
 
-;;mac key binding
+;; mac key binding
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier 'meta)
 )
+
+;; ack-and-a-half short alias
+(defalias 'ack 'ack-and-a-half)
+(defalias 'ack-same 'ack-and-a-half-same)
+(defalias 'ack-find-file 'ack-and-a-half-find-file)
+(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
 (provide 'init-local)
 ;;; init-local.el ends here
